@@ -48,6 +48,15 @@ class MyHomePage extends StatelessWidget {
               elevation: 5,
             ),
           ),
+          Card(
+            elevation: 3,
+            child: Column(
+              children: <Widget>[
+                TextField(),
+                TextField(),
+              ],
+            ),
+          ),
           Column(
             children: transactions.map((tx) {
               return Card(
