@@ -50,11 +50,20 @@ class MyHomePage extends StatelessWidget {
           ),
           Card(
             elevation: 3,
-            child: Column(
-              children: <Widget>[
-                TextField(),
-                TextField(),
-              ],
+            child: Container(
+              padding: EdgeInsets.all(10),
+              child: Column(
+                children: <Widget>[
+                  TextField(
+                    cursorColor: Colors.lightBlue,
+                    decoration: InputDecoration(labelText: 'Title'),
+                  ),
+                  TextField(
+                    cursorColor: Colors.lightBlue,
+                    decoration: InputDecoration(labelText: 'Amount'),
+                  ),
+                ],
+              ),
             ),
           ),
           Column(
