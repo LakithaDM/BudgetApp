@@ -43,7 +43,7 @@ class MyHomePage extends StatelessWidget {
           Container(
             width: double.infinity,
             child: Card(
-              color: Colors.blue,
+              color: Colors.lightBlue,
               child: Text('CHART!'),
               elevation: 5,
             ),
@@ -53,6 +53,7 @@ class MyHomePage extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.all(10),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
                   TextField(
                     cursorColor: Colors.lightBlue,
@@ -62,6 +63,11 @@ class MyHomePage extends StatelessWidget {
                     cursorColor: Colors.lightBlue,
                     decoration: InputDecoration(labelText: 'Amount'),
                   ),
+                  FlatButton(
+                    child: Text('Add Transaction'),
+                    textColor: Colors.lightBlue,
+                    onPressed: () {},
+                  )
                 ],
               ),
             ),
@@ -78,7 +84,7 @@ class MyHomePage extends StatelessWidget {
                       ),
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: Colors.purple,
+                          color: Colors.blue,
                           width: 2,
                         ),
                       ),
@@ -88,7 +94,7 @@ class MyHomePage extends StatelessWidget {
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
-                          color: Colors.purple,
+                          color: Colors.blue,
                         ),
                       ),
                     ),
