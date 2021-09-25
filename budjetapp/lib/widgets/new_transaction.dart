@@ -28,6 +28,7 @@ class NewTransaction extends StatelessWidget {
               cursorColor: Colors.lightBlue,
               decoration: InputDecoration(labelText: 'Amount'),
               controller: amountController,
+              keyboardType: TextInputType.number,
               /*onChanged: (val) {
                       amountInput = val;
                     },*/
