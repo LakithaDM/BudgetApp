@@ -13,6 +13,8 @@ class MyApp extends StatelessWidget {
       title: 'Expenses Management',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        accentColor: Colors.amber,
+        fontFamily: 'Quicksand',
       ),
       home: MyHomePage(),
     );
