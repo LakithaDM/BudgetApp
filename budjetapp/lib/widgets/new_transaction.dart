@@ -16,11 +16,9 @@ class _NewTransactionState extends State<NewTransaction> {
   DateTime _selectedDate;
 
   void _submitData() {
-
-    if(_amountController.text.isEmpty) {
+    if (_amountController.text.isEmpty) {
       return;
     }
-
     final enteredTitle = _titleController.text;
     final enteredAmount = double.parse(_amountController.text);
 
@@ -41,16 +39,17 @@ class _NewTransactionState extends State<NewTransaction> {
     showDatePicker(
       context: context,
       initialDate: DateTime.now(),
-      firstDate: DateTime(2021),
+      firstDate: DateTime(2019),
       lastDate: DateTime.now(),
     ).then((pickedDate) {
       if (pickedDate == null) {
         return;
       }
       setState(() {
-         _selectedDate = pickedDate;
+        _selectedDate = pickedDate;
       });
     });
+    print('...');
   }
 
   @override
@@ -84,7 +83,7 @@ class _NewTransactionState extends State<NewTransaction> {
                   Expanded(
                     child: Text(
                       _selectedDate == null
-                          ? 'Add Date:'
+                          ? 'No Date Chosen!'
                           : 'Picked Date: ${DateFormat.yMd().format(_selectedDate)}',
                     ),
                   ),
@@ -92,10 +91,12 @@ class _NewTransactionState extends State<NewTransaction> {
                     textColor: Theme.of(context).primaryColor,
                     child: Text(
                       'Choose Date',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     onPressed: _presentDatePicker,
-                  )
+                  ),
                 ],
               ),
             ),
